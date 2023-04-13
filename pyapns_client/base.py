@@ -63,13 +63,11 @@ class BaseAPNSClient:
 
     @property
     def _http_options(self):
-        limits = httpx.Limits(max_connections=1, max_keepalive_connections=0)
         return {
             **self._auth(),
             "verify": self._root_cert_path,
             "http2": True,
             "timeout": 10.0,
-            "limits": limits,
             "base_url": self._base_url,
         }
 

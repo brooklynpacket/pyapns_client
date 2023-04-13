@@ -62,6 +62,7 @@ setup(
     },
     install_requires=[
         "httpx[http2]>=0.24.0",
+        "httpcore>=0.17",
         "PyJWT>=2",
         "cryptography",
         "pytz",
